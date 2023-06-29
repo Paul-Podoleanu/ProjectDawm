@@ -1,0 +1,76 @@
+<nz-modal
+  [(nzVisible)]="isVisible"
+  nzTitle="Add"
+  (nzOnCancel)="onCancel()"
+  (nzOnOk)="onOk()"
+  [nzOkDisabled]="!addForm.valid">
+  <ng-container *nzModalContent>
+    <form nz-form [formGroup]="addForm" class="add-form">
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input the cat name!">
+          <nz-input-group nzPrefixIcon="name">
+            <input
+              type="text"
+              nz-input
+              formControlName="name"
+              placeholder="Name"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input the cat age!">
+          <nz-input-group nzPrefixIcon="age">
+            <input
+              type="number"
+              nz-input
+              formControlName="age"
+              placeholder="Age"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input the cat breed!">
+          <nz-input-group nzPrefixIcon="breed">
+            <input
+              type="text"
+              nz-input
+              formControlName="breed"
+              placeholder="Breed"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input the cat's weight!">
+          <nz-input-group nzPrefixIcon="weight">
+            <input
+              type="number"
+              nz-input
+              formControlName="weight"
+              placeholder="Weight"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input the cat's owner!">
+          <nz-input-group nzPrefixIcon="owner">
+            <input
+              type="text"
+              nz-input
+              formControlName="owner"
+              placeholder="Owner"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+
+    </form>
+  </ng-container>
+</nz-modal>

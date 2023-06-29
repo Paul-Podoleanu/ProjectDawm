@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Whiskers",
+    "age": 3,
+    "breed": "Maine Coon",
+    "weight": 12,
+    "owner": "Sarah Johnson"
+  },
+  {
+    "name": "Luna",
+    "age": 2,
+    "breed": "Siamese",
+    "weight": 8,
+    "owner": "Michael Anderson"
+  },
+  {
+    "name": "Oliver",
+    "age": 4,
+    "breed": "Bengal",
+    "weight": 10,
+    "owner": "Emily Thompson"
+  },
+  {
+    "name": "Bella",
+    "age": 5,
+    "breed": "Persian",
+    "weight": 9,
+    "owner": "David Wilson"
+  },
+  {
+    "name": "Simba",
+    "age": 1,
+    "breed": "Ragdoll",
+    "weight": 11,
+    "owner": "Jessica Martinez"
+  },
+  {
+    "name": "Milo",
+    "age": 6,
+    "breed": "British Shorthair",
+    "weight": 13,
+    "owner": "Christopher Davis"
+  },
+  {
+    "name": "Nala",
+    "age": 2,
+    "breed": "Scottish Fold",
+    "weight": 7,
+    "owner": "Olivia Thompson"
+  }
+
+]

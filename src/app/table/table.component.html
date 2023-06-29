@@ -1,0 +1,60 @@
+<div class="table-container">
+
+<app-add-form
+[isVisible]="showAddModal"
+(closeModal)="showAddModal = false"
+></app-add-form>
+
+<div class="table-header">
+  <p>The Kitty Data Base</p>
+</div>
+
+
+<div class="button">
+  <button nz-button (click)="addCat()" nzType="primary">
+    Add New Cat
+  </button>
+</div>
+
+
+<!--Search bar-->
+<div class="search-bar">
+<nz-input-group [nzSuffix]="suffixIconSearch">
+  <input type="text" #searchText nz-input placeholder="input search text"  Green   (keyup.enter)="search(searchText.value)"/>
+</nz-input-group>
+<ng-template #suffixIconSearch>
+  <i nz-icon nzType="search"></i>
+</ng-template>
+</div>
+
+
+<!--Actual table-->
+<nz-table #sortTable [nzData]="listOfCats" nzTableLayout="fixed">
+  <thead>
+    <tr>
+      <!--Order every column from the table-->
+      <th
+      *ngFor="let column of listOfColumns" [nzSortFn]="column.compare" [nzSortPriority]="column.priority">
+      {{ column.title }}
+    </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let cat of sortTable.data">
+      <td>{{ cat.name }}</td>
+      <td>{{ cat.age }}</td>
+      <td>{{ cat.breed }}</td>
+      <td>{{ cat.weight }}</td>
+      <td>{{ cat.owner }}</td>
+      <td>
+        <span
+            nz-icon
+            nzType="delete"
+            nzTheme="outline"
+            (click)="deleteCat(cat)">
+          </span>
+    </tr>
+  </tbody>
+</nz-table>
+</div>
